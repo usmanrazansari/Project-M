@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project M</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .Top {
+        text-align: right;
+        margin-bottom: 0px;
+        background-color: #fffefe;
+        color: #110404;
+        padding: 20px;
+        position: relative;
+      }
+
+      .styled-m {
+        font-size: 36px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        text-decoration-color: #000000;
+        text-decoration: slategrey;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        font-family: "Roboto", cursive;
+      }
+
+      .Top a {
+        margin-left: 10px;
+        color: #000;
+        text-decoration: none;
+      }
+
+      .Buildingpic {
+        width: 100%;
+        height: 600px;
+        background-image: url("images/blackbuild.avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        text-align: left;
+        z-index: 1;
+      }
+
+      .overlay-text p {
+        margin-top: -20px;
+        font-size: 15px;
+      }
+
+      .search {
+        background-color: #d2d9e033;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        padding: none;
+      }
+      .say {
+        text-align: left;
+        top: 40%;
+        left: 15%;
+        z-index: 1;
+        margin-top: 550px;
+        font-size: 15px;
+        position: absolute;
+        font-size: large;
+        margin-bottom: 100%;
+        padding: 20px;
+      }
+
+      .line {
+        margin-top: 0%;
+        font-size: large;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .sections-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        color: grey;
+      }
+
+      .section {
+        flex: 1;
+        padding: 40px;
+        color: #000;
+      }
+
+      .learn {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        margin-top: 10px;
+        border-radius: 3px;
+        font-size: 10px;
+      }
+      .learn:hover {
+        background-color: white;
+        color: rgb(158, 155, 155);
+      }
+      .P {
+        color: grey;
+      }
+      .build1 {
+        width: 100%;
+        height: 500px;
+        background-image: url("images/pexels-photo-2362009.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin-top: 900px;
+      }
+      .sec-text {
+        position: absolute;
+        top: 50%;
+        left: 46%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        z-index: 1;
+      }
+      .section1 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        color: rgb(250, 249, 249);
+        flex: 1;
+        text-align: center;
+        color: #f5f2f2;
+        left: 100px;
+      }
+      .name1 {
+        font-family: Arial, sans-serif;
+      }
+      .name2 {
+        font-family: "Times New Roman", serif;
+      }
+      .name3 {
+        font-family: "Courier New", monospace;
+      }
+      .name4 {
+        font-family: "Verdana", sans-serif;
+      }
+      .name5 {
+        font-family: "Georgia", serif;
+      }
+      .name6 {
+        font-family: "Comic Sans MS", sans-serif;
+      }
+      .sec-text1 {
+        text-align: left;
+        top: 40%;
+        left: 15%;
+        z-index: 1;
+        margin-top: 1900px;
+        font-size: 15px;
+        position: absolute;
+        font-size: large;
+        margin-bottom: 100%;
+        padding: 20px;
+      }
+      .for1 {
+        left: 200px;
+        height: 300px;
+        width: 400px;
+        background-repeat: no-repeat;
+        padding: 20px;
+        background-position: center;
+        position: absolute;
+        margin-top: 300px;
+        font-weight: bolder;
+      }
+      .for2 {
+        right: 200px;
+        height: 100px;
+        width: 400px;
+        background-repeat: no-repeat;
+        padding: 20px;
+        background-position: center;
+        position: absolute;
+        margin-top: 300px;
+        font-weight: bolder;
+      }
+      .for3 {
+        right: 200px;
+        height: 100px;
+        width: 400px;
+        background-repeat: no-repeat;
+        padding: 20px;
+        background-position: center;
+        position: absolute;
+        margin-top: 800px;
+        font-weight: bolder;
+      }
+      .for4 {
+        left: 200px;
+        height: 100px;
+        width: 400px;
+        background-repeat: no-repeat;
+        padding: 20px;
+        background-position: center;
+        position: absolute;
+        margin-top: 800px;
+        font-weight: bolder;
+      }
+      .font4all {
+        font-weight: lighter;
+        color: grey;
+      }
+      .footer1 {
+        background-color: #075bf8;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+        margin-top: 1400px;
+        font-weight: bold;
+      }
+      .button-learn {
+        background-color: #f5f2f2;
+        font-weight: lighter;
+        padding: 7px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+        padding-left: 6px;
+        padding-top: 6px;
+        padding-right: 6px;
+        padding-top: 8px;
+      }
+      .button-learn:hover {
+        background-color: rgb(209, 201, 201);
+      }
+      .footer2 {
+        background-color: #000000;
+        color: #fff;
+        padding: 37px;
+        text-align: center;
+        font-weight: bold;
+        font-family: bold;
+      }
+      .font-M {
+        font-family: "roboto", cursive;
+        font-size: 30px;
+        margin-bottom: 5px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Top">
+      <span class="styled-m">M</span>
+      <a href="#Sample">Sample</a>
+      <a href="#Features">Features</a>
+      <a href="#Layouts">Layouts</a>
+      <a href="#Our Shop">Our Shop</a>
+      <a href="#Buy Themes">Buy Themes</a>
+      <button>
+        <img class="search" src="images/search.icon2.png" alt="Search" />
+      </button>
+    </div>
+
+    <div class="Buildingpic">
+      <div class="overlay-text">
+        <h1>We crush<br />minimal<br />design.</h1>
+        <p>
+          <strong>MONOCHROME</strong> is a creative agency based in Chicago.
+          We<br />developed the Genesis Framework and build mobile-optimized<br />themes
+          for WordPress.
+        </p>
+      </div>
+    </div>
+
+    <div class="say">
+      <h1>We build experience.</h1>
+      <span class="line"
+        ><p>A minimalist approach is the only way to design a website</p></span
+      >
+      &nbsp; &nbsp; &nbsp;
+
+      <p>__</p>
+
+      &nbsp; &nbsp; &nbsp;
+      <div class="sections-container">
+        <div class="section">
+          <h4>DESIGN</h4>
+          <p class="P">
+            With an emphasis on<br />typography, white space, and<br />
+            mobile-optimized design, your<br />
+            website will look absolutely<br />
+            breathtaking.
+          </p>
+          <button class="learn">LEARN MORE</button>
+        </div>
+
+        <div class="section">
+          <h4>CONTENT</h4>
+          <p class="P">
+            Our team will teach you the art<br />of writing audience-focused<br />content
+            that will help you<br />
+            achieve the success you truly<br />deserve.
+          </p>
+          <button class="learn">LEARN MORE</button>
+        </div>
+
+        <div class="section">
+          <h4>STRATEGY</h4>
+          <p class="P">
+            We help creative entrepreneurs<br />build their digital business
+            by<br />focusing on three key elements<br />of a successful online
+            platform.
+          </p>
+          <button class="learn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+    <div class="build1">
+      <div class="sec-text">
+        <h1>We design brands</h1>
+        <p>A simple look is all you need to crush your competition.</p>
+        &nbsp; &nbsp; &nbsp;
+        <p>__</p>
+        &nbsp; &nbsp; &nbsp;
+        <div class="section1">
+          <span class="name1"><p>Les Avenirs&nbsp;</p></span>
+          <span class="name2"
+            ><p>&nbsp;avec'simple&nbsp;&nbsp;&nbsp;&nbsp;</p></span
+          >
+          <span class="name3"><p>WHITESPACE&nbsp;&nbsp;</p></span>
+          <span class="name4"><p>m'n'malism&nbsp;&nbsp;&nbsp;&nbsp;</p></span>
+          <span class="name5"><p>barcelona33&nbsp;&nbsp;&nbsp;</p></span>
+          <span class="name6"
+            ><p>smoothVANILLA</p>
+            <p></p
+          ></span>
+        </div>
+      </div>
+    </div>
+    <div class="sec-text1">
+      <h1>We create stories</h1>
+      <p>A killer narrative will your reader into raving fans.</p>
+      &nbsp; &nbsp;
+      <p>__</p>
+      &nbsp; &nbsp;
+    </div>
+    <div class="for0">
+      <div class="for1">
+        <img src="images/photo-white1.avif" />
+        <p>OVERCOMING CREATIVE BLOCK</p>
+        <span class="font4all"><p>Brian Gardner . May 1, 2017</p></span>
+      </div>
+      <div class="for2">
+        <img src="images/photo-u.avif" />
+        <p>OVERCOMING CREATIVE BLOCK</p>
+        <span class="font4all"><p>Brian Gardner . May 1, 2017</p></span>
+      </div>
+      <div class="for3">
+        <img src="images/photo-k.avif" />
+        <p>OVERCOMING CREATIVE BLOCK</p>
+        <span class="font4all"><p>Brian Gardner . May 1, 2017</p></span>
+      </div>
+      <div class="for4">
+        <img src="images/photo-1....avif" />
+        <p>OVERCOMING CREATIVE BLOCK</p>
+        <span class="font4all"><p>Brian Gardner . May 1, 2017</p></span>
+      </div>
+    </div>
+    <footer class="footer1">
+      <p>
+        Hit the ground running with a minimalist look.
+        <button class="button-learn">LEARN MORE</button>
+      </p>
+    </footer>
+    <footer class="footer2">
+      <p class="font-M">M</p>
+      <p>Handcraft with &#9829; in Chicago . Powered by StudioPress</p>
+      <p>FACEBOOK--TWITTER--INSTAGRAM</p>
+    </footer>
+  </body>
+</html>
